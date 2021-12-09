@@ -1,11 +1,15 @@
-from PyQt5.QtWidgets import *
+"""
+"""
+
 from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import (QWidget, QHBoxLayout, QSpacerItem, QSizePolicy)
+
 from GUI.RibbonPane import RibbonPane
 
 
 class RibbonTab(QWidget):
     def __init__(self, parent, name):
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         layout = QHBoxLayout()
         self.setLayout(layout)
         layout.setContentsMargins(0, 0, 0, 0)

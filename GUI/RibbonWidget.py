@@ -1,4 +1,7 @@
-from PyQt5.QtWidgets import *
+"""
+"""
+from PyQt5.QtWidgets import(QTabWidget, QToolBar)
+
 from GUI.RibbonTab import RibbonTab
 from GUI import gui_scale
 from GUI.StyleSheets import get_stylesheet
@@ -8,7 +11,7 @@ __author__ = 'magnus'
 
 class RibbonWidget(QToolBar):
     def __init__(self, parent):
-        QToolBar.__init__(self, parent)
+        super().__init__(parent)
         self.setStyleSheet(get_stylesheet("ribbon"))
         self.setObjectName("ribbonWidget")
         self.setWindowTitle("Ribbon")

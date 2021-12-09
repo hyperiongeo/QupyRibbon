@@ -1,6 +1,9 @@
+"""
+"""
 from PyQt5 import Qt
 from PyQt5.QtCore import QSize
-from PyQt5.QtWidgets import *
+# from PyQt5.QtWidgets import *
+from PyQt5.QtWidgets import (QToolButton)
 
 from GUI import gui_scale
 from GUI.StyleSheets import get_stylesheet
@@ -10,8 +13,8 @@ __author__ = 'magnus'
 
 class RibbonButton(QToolButton):
     def __init__(self, owner, action, is_large):
-        QPushButton.__init__(self, owner)
-        # sc = 1
+        super().__init__(owner)
+
         sc = gui_scale()
         self._actionOwner = action
         self.update_button_status_from_action()

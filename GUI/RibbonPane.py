@@ -1,3 +1,5 @@
+"""
+"""
 from PyQt5 import QtGui
 from PyQt5.Qt import Qt
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
@@ -9,12 +11,13 @@ __author__ = 'mamj'
 
 class RibbonPane(QWidget):
     def __init__(self, parent, name):
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setStyleSheet(get_stylesheet("ribbonPane"))
         horizontal_layout = QHBoxLayout()
         horizontal_layout.setSpacing(0)
         horizontal_layout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(horizontal_layout)
+
         vertical_widget = QWidget(self)
         horizontal_layout.addWidget(vertical_widget)
         horizontal_layout.addWidget(RibbonSeparator(self))
@@ -22,6 +25,7 @@ class RibbonPane(QWidget):
         vertical_layout.setSpacing(0)
         vertical_layout.setContentsMargins(0, 0, 0, 0)
         vertical_widget.setLayout(vertical_layout)
+
         label = QLabel(name)
         label.setAlignment(Qt.AlignCenter)
         label.setStyleSheet("color:#666;")
@@ -52,7 +56,7 @@ class RibbonPane(QWidget):
 
 class RibbonSeparator(QWidget):
     def __init__(self, parent):
-        QWidget.__init__(self, parent)
+        super().__init__(parent)
         self.setMinimumHeight(gui_scale() * 80)
         self.setMaximumHeight(gui_scale() * 80)
         self.setMinimumWidth(1)

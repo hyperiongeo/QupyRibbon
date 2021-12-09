@@ -1,3 +1,5 @@
+"""
+"""
 __author__ = 'magnus'
 
 stylesheet_instance = None
@@ -10,7 +12,7 @@ def get_stylesheet(name):
     return stylesheet_instance.get_stylesheet(name)
 
 
-class Stylesheets(object):
+class Stylesheets:
     def __init__(self):
         self._stylesheets = {}
         self.make_stylesheet("main", "stylesheets/main.css")
