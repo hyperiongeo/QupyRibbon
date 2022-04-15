@@ -1,7 +1,7 @@
 # QupyRibbon
 ![alt tag](http://i.imgur.com/ry2SudV.png)
 
-This is a ribbon implementation in Python 3 using PyQt5.
+This is a ribbon implementation in Python 3 using PyQt6.
 
 To use this you need to get the dependencies:
 ```
@@ -16,5 +16,5 @@ git clone https://github.com/pracedru/QupyRibbon
 ```
 and run:
 ```
-python3 main.py 
+python3 main.py
 ```

@@ -1,14 +1,15 @@
 """
+style sheets
 """
 __author__ = 'magnus'
 
-stylesheet_instance = None
+# stylesheet_instance = None
 
 
 def get_stylesheet(name):
-    global stylesheet_instance
-    if not stylesheet_instance:
-        stylesheet_instance = Stylesheets()
+    # global stylesheet_instance
+    # if not stylesheet_instance:
+    stylesheet_instance = Stylesheets()
     return stylesheet_instance.get_stylesheet(name)
 
 
@@ -22,7 +23,7 @@ class Stylesheets:
         self.make_stylesheet("ribbonSmallButton", "stylesheets/ribbonSmallButton.css")
 
     def make_stylesheet(self, name, path):
-        with open(path) as data_file:
+        with open(path, encoding='utf-8') as data_file:
             stylesheet = data_file.read()
 
         self._stylesheets[name] = stylesheet

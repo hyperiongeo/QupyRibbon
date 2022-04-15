@@ -1,8 +1,9 @@
 """
+panes
 """
-from PyQt5 import QtGui
-from PyQt5.Qt import Qt
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
+from PyQt6 import QtGui
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
 from GUI import gui_scale
 from GUI.StyleSheets import get_stylesheet
 
@@ -27,20 +28,20 @@ class RibbonPane(QWidget):
         vertical_widget.setLayout(vertical_layout)
 
         label = QLabel(name)
-        label.setAlignment(Qt.AlignCenter)
+        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         label.setStyleSheet("color:#666;")
         content_widget = QWidget(self)
         vertical_layout.addWidget(content_widget)
         vertical_layout.addWidget(label)
         content_layout = QHBoxLayout()
-        content_layout.setAlignment(Qt.AlignLeft)
+        content_layout.setAlignment(Qt.AlignmentFlag.AlignLeft)
         content_layout.setSpacing(0)
         content_layout.setContentsMargins(0, 0, 0, 0)
         self.contentLayout = content_layout
         content_widget.setLayout(content_layout)
 
     def add_ribbon_widget(self, widget):
-        self.contentLayout.addWidget(widget, 0, Qt.AlignTop)
+        self.contentLayout.addWidget(widget, 0, Qt.AlignmentFlag.AlignTop)
 
     def add_grid_widget(self, width):
         widget = QWidget()
@@ -50,21 +51,21 @@ class RibbonPane(QWidget):
         grid_layout.setSpacing(4)
         grid_layout.setContentsMargins(4, 4, 4, 4)
         self.contentLayout.addWidget(widget)
-        grid_layout.setAlignment(Qt.AlignTop | Qt.AlignLeft)
+        grid_layout.setAlignment(Qt.AlignmentFlag.AlignTop | Qt.AlignmentFlag.AlignLeft)
         return grid_layout
 
 
 class RibbonSeparator(QWidget):
     def __init__(self, parent):
         super().__init__(parent)
-        self.setMinimumHeight(gui_scale() * 80)
-        self.setMaximumHeight(gui_scale() * 80)
+        self.setMinimumHeight(int(gui_scale() * 80))
+        self.setMaximumHeight(int(gui_scale() * 80))
         self.setMinimumWidth(1)
         self.setMaximumWidth(1)
         self.setLayout(QHBoxLayout())
 
     def paintEvent(self, event):
-        qp = QtGui.QPainter()
-        qp.begin(self)
-        qp.fillRect(event.rect(), Qt.lightGray)
-        qp.end()
+        pnt = QtGui.QPainter()
+        pnt.begin(self)
+        pnt.fillRect(event.rect(), Qt.GlobalColor.lightGray)
+        pnt.end()

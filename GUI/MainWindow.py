@@ -1,13 +1,14 @@
 """
+main windows
 """
-from PyQt5.QtCore import *
-from PyQt5.QtGui import QKeySequence as QKSec
-from PyQt5.QtWidgets import (QMainWindow, QAction, QDockWidget, QMessageBox, QLabel)
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QKeySequence as QKSec, QAction
+from PyQt6.QtWidgets import (QMainWindow, QDockWidget, QMessageBox, QLabel)
 
 from GUI.RibbonButton import RibbonButton
 from GUI.Icons import get_icon
 from GUI.RibbonTextbox import RibbonTextbox
-from GUI.RibbonWidget import *
+from GUI.RibbonWidget import RibbonWidget
 
 __author__ = 'mamj'
 
@@ -22,15 +23,15 @@ class TestMainWindow(QMainWindow):
         self._main_dock_widget = QDockWidget(self)
         self._main_dock_widget.setObjectName("MainDock")
         self._main_dock_widget.setWindowTitle("Main dock")
-        self.addDockWidget(Qt.LeftDockWidgetArea, self._main_dock_widget)
+        self.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, self._main_dock_widget)
         self.centralWidget()
 
         # -------------      actions       -----------------
 
-        self._open_action = self.add_action("Open", "open", "Open file", True, self.on_open_file, QKSec.Open)
-        self._save_action = self.add_action("Save", "save", "Save file", True, self.on_save, QKSec.Save)
-        self._copy_action = self.add_action("Copy", "copy", "Copy selection", True, self.on_copy, QKSec.Copy)
-        self._paste_action = self.add_action("Paste", "paste", "Paste from clipboard", True, self.on_paste, QKSec.Paste)
+        self._open_action = self.add_action("Open", "open", "Open file", True, self.on_open_file, QKSec.StandardKey.Open)
+        self._save_action = self.add_action("Save", "save", "Save file", True, self.on_save, QKSec.StandardKey.Save)
+        self._copy_action = self.add_action("Copy", "copy", "Copy selection", True, self.on_copy, QKSec.StandardKey.Copy)
+        self._paste_action = self.add_action("Paste", "paste", "Paste from clipboard", True, self.on_paste, QKSec.StandardKey.Paste)
         self._zoom_action = self.add_action("Zoom", "zoom", "Zoom in on document", True, self.on_zoom)
         self._about_action = self.add_action("About", "about", "About QupyRibbon", True, self.on_about)
         self._license_action = self.add_action("License", "license", "Licence for this software", True, self.on_license)
@@ -120,8 +121,8 @@ class TestMainWindow(QMainWindow):
         QMessageBox().about(self, "About QupyRibbon", text)
 
     def on_license(self):
-        file = open('LICENSE', 'r')
-        lic = file.read()
+        with open('LICENSE', 'r', encoding='utf-8') as open_file:
+            lic = open_file.read()
         QMessageBox().information(self, "License", lic)
 
 
@@ -234,6 +235,6 @@ class MainWindow(QMainWindow):
         QMessageBox().about(self, "About QupyRibbon", text)
 
     def on_license(self):
-        file = open('LICENSE', 'r')
-        lic = file.read()
+        with open('LICENSE', 'r', encoding='utf-8') as open_file:
+            lic = open_file.read()
         QMessageBox().information(self, "License", lic)

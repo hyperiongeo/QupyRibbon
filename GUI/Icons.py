@@ -1,14 +1,17 @@
-from PyQt5.QtGui import *
+"""
+pixels
+"""
+from PyQt6.QtGui import QIcon, QPixmap
 
 __author__ = 'magnus'
 
-icons_instance = None
+# icons_instance = None
 
 
 def get_icon(name):
-    global icons_instance
-    if not icons_instance:
-        icons_instance = Icons()
+    # global icons_instance
+    # if not icons_instance:
+    icons_instance = Icons()
     return icons_instance.icon(name)
 
 
@@ -29,7 +32,7 @@ class Icons(object):
 
     def make_icon(self, name, path):
         icon = QIcon()
-        icon.addPixmap(QPixmap(path), QIcon.Normal, QIcon.Off)
+        icon.addPixmap(QPixmap(path), QIcon.Mode.Normal, QIcon.State.Off)
         self._icons[name] = icon
 
     def icon(self, name):
