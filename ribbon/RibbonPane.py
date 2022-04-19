@@ -1,11 +1,11 @@
 """
 panes
 """
-from PyQt6 import QtGui
-from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
-from GUI import gui_scale
-from GUI.StyleSheets import get_stylesheet
+from pyqtgraph.Qt import QtGui
+from pyqtgraph.Qt.QtCore import Qt
+from pyqtgraph.Qt.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
+from ribbon import gui_scale
+from ribbon.StyleSheets import get_stylesheet
 
 __author__ = 'mamj'
 

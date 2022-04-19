@@ -2,9 +2,9 @@
 style sheets
 """
 __author__ = 'magnus'
+import os
 
 # stylesheet_instance = None
-
 
 def get_stylesheet(name):
     # global stylesheet_instance
@@ -23,6 +23,7 @@ class Stylesheets:
         self.make_stylesheet("ribbonSmallButton", "stylesheets/ribbonSmallButton.css")
 
     def make_stylesheet(self, name, path):
+        path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), path)
         with open(path, encoding='utf-8') as data_file:
             stylesheet = data_file.read()
 

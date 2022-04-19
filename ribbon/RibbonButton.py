@@ -2,12 +2,11 @@
 buttons
 """
 # from PyQt5 import Qt
-from PyQt6.QtCore import QSize, Qt
-# from PyQt6.QtWidgets import *
-from PyQt6.QtWidgets import (QToolButton)
+from pyqtgraph.Qt.QtCore import QSize, Qt
+from pyqtgraph.Qt.QtWidgets import (QToolButton)
 
-from GUI import gui_scale
-from GUI.StyleSheets import get_stylesheet
+from ribbon import gui_scale
+from ribbon.StyleSheets import get_stylesheet
 
 __author__ = 'magnus'
 
@@ -31,9 +30,9 @@ class RibbonButton(QToolButton):
             self.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
             self.setIconSize(QSize(int(32 * scale), int(32 * scale)))
         else:
-            self.setToolButtonStyle(2)
-            self.setMaximumWidth(120 * scale)
-            self.setIconSize(QSize(16 * scale, 16 * scale))
+            self.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+            self.setMaximumWidth(int(120 * scale))
+            self.setIconSize(QSize(int(16 * scale), int(16 * scale)))
             self.setStyleSheet(get_stylesheet("ribbonSmallButton"))
 
     def update_button_status_from_action(self):

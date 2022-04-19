@@ -2,10 +2,10 @@
 tabs
 """
 
-from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import (QWidget, QHBoxLayout, QSpacerItem, QSizePolicy)
+from pyqtgraph.Qt.QtCore import Qt
+from pyqtgraph.Qt.QtWidgets import (QWidget, QHBoxLayout, QSpacerItem, QSizePolicy)
 
-from GUI.RibbonPane import RibbonPane
+from ribbon.RibbonPane import RibbonPane
 
 
 class RibbonTab(QWidget):

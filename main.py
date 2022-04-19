@@ -3,12 +3,11 @@ main
 """
 import sys
 
-from PyQt6.QtWidgets import QApplication
+from pyqtgraph.Qt.QtWidgets  import (QApplication)
 
-from GUI.MainWindow import TestMainWindow
+from ribbon.MainWindow import TestMainWindow
 
 __author__ = 'mamj'
-
 
 def main():
     app = QApplication(sys.argv)

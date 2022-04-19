@@ -1,11 +1,11 @@
 """
 widget
 """
-from PyQt6.QtWidgets import(QTabWidget, QToolBar)
+from pyqtgraph.Qt.QtWidgets import(QTabWidget, QToolBar)
 
-from GUI.RibbonTab import RibbonTab
-from GUI import gui_scale
-from GUI.StyleSheets import get_stylesheet
+from ribbon.RibbonTab import RibbonTab
+from ribbon import gui_scale
+from ribbon.StyleSheets import get_stylesheet
 
 __author__ = 'magnus'
 

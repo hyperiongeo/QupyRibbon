@@ -1,12 +1,12 @@
 """
-pixels
+icons
 """
-from PyQt6.QtGui import QIcon, QPixmap
+import os
+from pyqtgraph.Qt.QtGui import QIcon, QPixmap
 
 __author__ = 'magnus'
 
 # icons_instance = None
-
 
 def get_icon(name):
     # global icons_instance
@@ -28,9 +28,12 @@ class Icons(object):
         self.make_icon("copy", "icons/copy.png")
         self.make_icon("about", "icons/about.png")
         self.make_icon("license", "icons/license.png")
-        self.make_icon("default", "icons/folder.png")
+        self.make_icon("default", "icons/under_construction.png")
+        self.make_icon("create", "icons/create.png")
+        self.make_icon("under_construction", "icons/under_construction.png")
 
     def make_icon(self, name, path):
+        path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), path)
         icon = QIcon()
         icon.addPixmap(QPixmap(path), QIcon.Mode.Normal, QIcon.State.Off)
         self._icons[name] = icon
