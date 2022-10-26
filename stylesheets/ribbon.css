@@ -28,10 +28,12 @@ QTabBar::tab {
     border-top-right-radius: 3px;
     margin-right:5px;
     color:#2A2A2A;
+    //font-size:7pt;//
  }
 
 QTabBar::tab:hover {
     background: rgba(255, 119, 0, 20%);
+
 }
 
 QTabBar::tab:selected{

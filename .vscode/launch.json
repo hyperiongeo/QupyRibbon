@@ -7,9 +7,9 @@
         {
             "env": {
                 "CONDA_DLL_SEARCH_MODIFICATION_ENABLE": "1",
-                "QGIS_PREFIX_PATH": "C:/Users/hooge/miniconda3/envs/geophys310/Library/bin",
-                "QT_PLUGIN_PATH":  "C:/Users/hooge/miniconda3/envs/geophys310/Library/plugins/platforms",
-                "QT_QPA_PLATFORM_PLUGIN_PATH": "C:/Users/hooge/miniconda3/envs/geophys310/Library/plugins/platforms",
+                "QGIS_PREFIX_PATH": "C:/Users/hooge/miniconda3/envs/geophys39/L9brary/bin",
+                "QT_PLUGIN_PATH":  "C:/Users/hooge/miniconda3/envs/geophys39/Library/plugins/platforms",
+                "QT_QPA_PLATFORM_PLUGIN_PATH": "C:/Users/hooge/miniconda3/envs/geophys39/Library/plugins/platforms",
 
                 // // CALL %OSGEO4W_ROOT%\bin\o4w_env.bat
 

@@ -1,4 +1,6 @@
-from PyQt6.QtWidgets import *
+"""
+"""
+from pyqtgraph.Qt.QtWidgets import (QApplication)
 
 __author__ = 'mamj'
 
