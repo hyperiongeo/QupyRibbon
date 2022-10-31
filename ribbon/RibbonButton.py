@@ -4,6 +4,7 @@ buttons
 # from PyQt5 import Qt
 from pyqtgraph.Qt.QtCore import QSize, Qt
 from pyqtgraph.Qt.QtWidgets import (QToolButton)
+from pyqtgraph.Qt.QtGui import QFont
 
 from ribbon import gui_scale
 from ribbon.StyleSheets import get_stylesheet
@@ -14,6 +15,10 @@ __author__ = 'magnus'
 class RibbonButton(QToolButton):
     def __init__(self, owner, action, is_large):
         super().__init__(owner)
+
+        font = QFont()
+        font.setPointSize(9)
+        self.setFont(font)
 
         scale = gui_scale()
         self._action_owner = action

@@ -38,6 +38,7 @@ class Icons(object):
         self.make_icon("map", "icons/map.png")
         self.make_icon("seismic", "icons/seismic.png")
         self.make_icon("wells", "icons/under-construction.png")
+        self.make_icon("las", "icons/icons8-well-100.png")
 
         self.make_icon("show", "icons/under-construction.png")
         self.make_icon("import", "icons/under-construction.png")

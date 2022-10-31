@@ -1,9 +1,10 @@
 """
 panes
 """
-from pyqtgraph.Qt import QtGui
 from pyqtgraph.Qt.QtCore import Qt
 from pyqtgraph.Qt.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
+from pyqtgraph.Qt.QtGui import QFont, QPainter
+
 from ribbon import gui_scale
 from ribbon.StyleSheets import get_stylesheet
 
@@ -13,6 +14,10 @@ __author__ = 'mamj'
 class RibbonPane(QWidget):
     def __init__(self, parent, name):
         super().__init__(parent)
+        font = QFont()
+        font.setPointSize(9)
+        self.setFont(font)
+
         self.setStyleSheet(get_stylesheet("ribbonPane"))
         horizontal_layout = QHBoxLayout()
         horizontal_layout.setSpacing(0)
@@ -65,7 +70,7 @@ class RibbonSeparator(QWidget):
         self.setLayout(QHBoxLayout())
 
     def paintEvent(self, event):
-        pnt = QtGui.QPainter()
+        pnt = QPainter()
         pnt.begin(self)
         pnt.fillRect(event.rect(), Qt.GlobalColor.lightGray)
         pnt.end()

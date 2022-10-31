@@ -4,6 +4,7 @@ tabs
 
 from pyqtgraph.Qt.QtCore import Qt
 from pyqtgraph.Qt.QtWidgets import (QWidget, QHBoxLayout, QSpacerItem, QSizePolicy)
+from pyqtgraph.Qt.QtGui import QFont
 
 from ribbon.RibbonPane import RibbonPane
 
@@ -11,6 +12,10 @@ from ribbon.RibbonPane import RibbonPane
 class RibbonTab(QWidget):
     def __init__(self, parent, name):
         super().__init__(parent)
+        font = QFont()
+        font.setPointSize(9)
+        self.setFont(font)
+
         layout = QHBoxLayout()
         self.setLayout(layout)
         layout.setContentsMargins(0, 0, 0, 0)

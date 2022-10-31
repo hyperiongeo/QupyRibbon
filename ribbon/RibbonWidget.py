@@ -3,6 +3,7 @@ widget
 """
 from pyqtgraph.Qt.QtCore import (Qt)
 from pyqtgraph.Qt.QtWidgets import (QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
+from pyqtgraph.Qt.QtGui import QFont
 
 from ribbon.RibbonTab import RibbonTab
 from ribbon import gui_scale
@@ -14,19 +15,19 @@ __author__ = 'magnus'
 class RibbonWidget(QToolBar):
     def __init__(self, parent):
         super().__init__(parent)
+        font = QFont()
+        font.setPointSize(9)
+        self.setFont(font)
+
         self.setStyleSheet(get_stylesheet("ribbon"))
         self.setObjectName("ribbonWidget")
         self.setWindowTitle("Ribbon")
         self._ribbon_widget = QTabWidget(self)
         self._ribbon_widget.setMaximumHeight(int(120*gui_scale()))
         self._ribbon_widget.setMinimumHeight(int(110*gui_scale()))
+        self._ribbon_widget.setFont(font)
         self.setMovable(False)
 
-        # frame = QFrame()
-        # layout = QHBoxLayout()
-        # frame.setLayout(layout)
-        # layout.addWidget(QCheckBox())
-        # layout.addWidget(QLabel("DLJvnLSDJvsdv"))
         self.addWidget(self._ribbon_widget)
 
         # self._ribbon_widget.setCornerWidget(frame, Qt.Corner.TopRightCorner)
