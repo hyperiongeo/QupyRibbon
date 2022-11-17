@@ -47,6 +47,7 @@ class Icons(object):
 
 
     def make_icon(self, name, path):
+        # print("____", name)
         path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), path)
         icon = QIcon()
         icon.addPixmap(QPixmap(path), QIcon.Mode.Normal, QIcon.State.Off)
