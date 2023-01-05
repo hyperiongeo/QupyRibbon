@@ -44,6 +44,8 @@ class Icons(object):
         self.make_icon("import", "icons/under-construction.png")
         self.make_icon("add_fault", "icons/under-construction.png")
         self.make_icon("import wells", "icons/under-construction.png")
+        self.make_icon("project", "icons/project.png")
+        self.make_icon("delete", "icons/icons8-delete-document-100.png")
 
 
     def make_icon(self, name, path):
