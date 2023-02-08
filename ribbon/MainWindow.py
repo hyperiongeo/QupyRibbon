@@ -96,7 +96,7 @@ __author__ = 'mamj'
 
 class RibbonMainWindow(QMainWindow):
     def __init__(self, parent=None, dock=False, title="Prospector"):
-        super().__init__(None)
+        super().__init__(parent)
         self.resize(1280, 800)
         self.setWindowTitle(title)
         self.setDockNestingEnabled(True)
