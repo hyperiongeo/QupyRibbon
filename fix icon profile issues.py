@@ -23,7 +23,7 @@ img = QImage(infile)
 csp = QColorSpace.NamedColorSpace.SRgb
 print(csp)
 img.convertToColorSpace(QColorSpace(QColorSpace.NamedColorSpace.SRgb))
-img.save(outfile) 
+img.save(outfile)
 
 # Start the main messageloop
 # sys.exit(app.exec())

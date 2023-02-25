@@ -7,15 +7,9 @@
         {
             "env": {
                 "CONDA_DLL_SEARCH_MODIFICATION_ENABLE": "1",
-                "QGIS_PREFIX_PATH": "C:/Users/hooge/miniconda3/envs/geophys39/L9brary/bin",
-                "QT_PLUGIN_PATH":  "C:/Users/hooge/miniconda3/envs/geophys39/Library/plugins/platforms",
-                "QT_QPA_PLATFORM_PLUGIN_PATH": "C:/Users/hooge/miniconda3/envs/geophys39/Library/plugins/platforms",
-
-                // // CALL %OSGEO4W_ROOT%\bin\o4w_env.bat
-
-                // // SET PATH=%PATH%;%QGIS%\bin
-                // // SET PYTHONPATH=%QGIS%\python;%PYTHONPATH%
-                // 'C:/Anaconda3/envs/conda-qgis/Library/./python', 'C:/Users/Guohan/AppData/Roaming/QGIS/QGIS3\\profiles\\default/python', 'C:/Users/Guohan/AppData/Roaming/QGIS/QGIS3\\profiles\\default/python/plugins', 'C:/Anaconda3/envs/conda-qgis/Library/./python/plugins', 'C:\\Anaconda3\\envs\\conda-qgis\\Library\\python', 'C:\\Anaconda3\\envs\\conda-qgis\\Library\\python\\plugins', 'C:\\', 'C:\\Anaconda3\\envs\\conda-qgis\\python39.zip', 'C:\\Anaconda3\\envs\\conda-qgis\\DLLs', 'C:\\Anaconda3\\envs\\conda-qgis\\lib', 'C:\\Anaconda3\\envs\\conda-qgis\\Library\\bin', 'C:\\Anaconda3\\envs\\conda-qgis', 'C:\\Anaconda3\\envs\\conda-qgis\\lib\\site-packages', 'C:\\Anaconda3\\envs\\conda-qgis\\lib\\site-packages\\win32', 'C:\\Anaconda3\\envs\\conda-qgis\\lib\\site-packages\\win32\\lib', 'C:\\Anaconda3\\envs\\conda-qgis\\lib\\site-packages\\Pythonwin',
+                "QGIS_PREFIX_PATH": "C:/Users/hooge/miniconda3/envs/geophys310/L9brary/bin",
+                "QT_PLUGIN_PATH":  "C:/Users/hooge/miniconda3/envs/geophys310/Library/plugins/platforms",
+                "QT_QPA_PLATFORM_PLUGIN_PATH": "C:/Users/hooge/miniconda3/envs/geophys310/Library/plugins/platforms",
             },
             "name": "Python: Current File",
             "type": "python",

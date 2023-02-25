@@ -6,7 +6,6 @@ from pyqtgraph.Qt.QtGui import QIcon, QPixmap
 
 __author__ = 'magnus'
 
-# icons_instance = None
 
 def get_icon(name):
     # global icons_instance
@@ -15,7 +14,7 @@ def get_icon(name):
     return icons_instance.icon(name)
 
 
-class Icons(object):
+class Icons:
     def __init__(self):
         self._icons = {}
         self.make_icon("", "icons/under-construction.png")
@@ -47,9 +46,7 @@ class Icons(object):
         self.make_icon("project", "icons/project.png")
         self.make_icon("delete", "icons/icons8-delete-document-100.png")
 
-
     def make_icon(self, name, path):
-        # print("____", name)
         path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), path)
         icon = QIcon()
         icon.addPixmap(QPixmap(path), QIcon.Mode.Normal, QIcon.State.Off)
@@ -62,3 +59,9 @@ class Icons(object):
         except KeyError:
             print("icon " + name + " not found")
         return icon
+
+    def get_icon(self, name):
+        # global icons_instance
+        # if not icons_instance:
+        # icons_instance = Icons()
+        return self.icon(name)
