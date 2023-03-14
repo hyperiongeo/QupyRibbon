@@ -5,10 +5,10 @@ from pyqtgraph.Qt.QtWidgets import QComboBox
 from pyqtgraph.Qt.QtGui import QFont
 
 class RibbonCombobox(QComboBox):
-    def __init__(self, default_value, change_connector, min_width=50, max_width=500, label=None):
+    def __init__(self, default_value, change_connector, min_width=50, max_width=50, label=None, font_size=9):
         super().__init__()
         font = QFont()
-        font.setPointSize(9)
+        font.setPointSize(font_size)
         self.setFont(font)
 
         self.setStyleSheet("border: 1px solid rgba(0,0,0,30%);")
