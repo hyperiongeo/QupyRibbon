@@ -110,11 +110,11 @@ class RibbonMainWindow(QMainWindow):
             pass
         self.centralWidget()
 
-        # -------------      textboxes       -----------------
+        # # -------------      textboxes       -----------------
 
-        self._text_box1 = RibbonTextbox("Text 1", self.on_text_box1_changed, 80)
-        self._text_box2 = RibbonTextbox("Text 2", self.on_text_box1_changed, 80)
-        self._text_box3 = RibbonTextbox("Text 3", self.on_text_box1_changed, 80)
+        # self._text_box1 = RibbonTextbox("Text 1", self.on_text_box1_changed, 80)
+        # self._text_box2 = RibbonTextbox("Text 2", self.on_text_box1_changed, 80)
+        # self._text_box3 = RibbonTextbox("Text 3", self.on_text_box1_changed, 80)
 
         # Ribbon
 
@@ -134,6 +134,7 @@ class RibbonMainWindow(QMainWindow):
         return action
 
     def init_ribbon(self):
+        self.create_actions()
         home_tab = self._ribbon.add_ribbon_tab("Home")
         file_pane = home_tab.add_ribbon_pane("File")
         file_pane.add_ribbon_widget(RibbonButton(self, self._open_action, True))
