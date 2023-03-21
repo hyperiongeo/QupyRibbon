@@ -2,7 +2,7 @@
 widget
 """
 from pyqtgraph.Qt.QtCore import (Qt)
-from pyqtgraph.Qt.QtWidgets import (QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
+from pyqtgraph.Qt.QtWidgets import (QWidget, QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
 from pyqtgraph.Qt.QtGui import QFont
 
 from ribbon.RibbonTab import RibbonTab
@@ -39,8 +39,8 @@ class RibbonWidget(QToolBar):
         return ribbon_tab
 
     def set_active(self, name):
-        self.setCurrentWidget(self.findChild("tab_" + name))
-
+        self._ribbon_widget.setCurrentWidget(self._ribbon_widget.findChild(QWidget, "tab_" + name))
+ 
 class RibbonTabBar(QToolBar):
     def __init__(self, parent):
         super().__init__(parent)
