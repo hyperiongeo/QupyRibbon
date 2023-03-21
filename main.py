@@ -5,7 +5,7 @@ import sys
 
 from pyqtgraph.Qt.QtWidgets  import (QApplication)
 
-from ribbon.MainWindow import MainWindow #, RibbonMainWindow
+from ribbon.RibbonMainWindow import MainWindow #, RibbonMainWindow
 
 __author__ = 'mamj'
 
