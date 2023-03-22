@@ -124,3 +124,35 @@ class RibbonMainWindow(QMainWindow):
             lic = open_file.read()
         QMessageBox().information(self, "License", lic)
 
+class RibbonWindow(QMainWindow):
+    def __init__(self, parent, title=""):
+        super().__init__(parent)
+        # self.resize(1280, 800)
+        self.setWindowTitle(title)
+
+        # self.setWindowIcon(QIcon("icons/capillary_logo_notext.png"))
+
+        self.centralWidget()
+
+        # Ribbon
+
+        self._ribbon = RibbonWidget(self)
+        self.addToolBar(self._ribbon)
+
+        # self.init_ribbon()
+
+    def add_action(self, caption, icon_name, status_tip, icon_visible, connection, shortcut=None):
+        action = QAction(get_icon(icon_name), caption, self)
+        action.setStatusTip(status_tip)
+        action.triggered.connect(connection)
+        action.setIconVisibleInMenu(icon_visible)
+        if shortcut is not None:
+            action.setShortcuts(shortcut)
+        self.addAction(action)
+        return action
+
+    def add_ribbon_button(self, action, is_large=True):
+        return RibbonButton(self, action, is_large)
+
+    def add_ribbon_combobox(self, default, change_connector, min_width=200, label="X"):
+        return RibbonCombobox(default, change_connector=change_connector, min_width=min_width, label=label)
