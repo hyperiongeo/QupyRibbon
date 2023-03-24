@@ -67,6 +67,10 @@ class Icons:
         self.make_icon("tif", "icons/icons8-tif-64.png")
         self.make_icon("json", "icons/icons8-json-80.png")
         self.make_icon("drilling-rig", "icons/icons8-drilling-rig-68.png")
+        self.make_icon("scatter", "icons/scatter.png")
+        self.make_icon("scatter-plot", "icons/scatter-plot.png")
+        self.make_icon("settings", "icons/settings.png")
+        self.make_icon("las", "icons/line-graph_vert.png")
 
 
     def make_icon(self, name, path):
