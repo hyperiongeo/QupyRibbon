@@ -1,15 +1,20 @@
 """
 icons
 """
+import sys
 import os
-from pyqtgraph.Qt.QtGui import QIcon, QPixmap
+from PyQt5.QtGui import QIcon, QPixmap
 
 __author__ = 'magnus'
+__maintainer__ = "Corey Hooge"
+
+if getattr(sys, 'frozen', False):
+    bundle_dir = sys._MEIPASS
+else:
+    bundle_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def get_icon(name):
-    # global icons_instance
-    # if not icons_instance:
     icons_instance = Icons()
     return icons_instance.icon(name)
 
@@ -74,7 +79,7 @@ class Icons:
 
 
     def make_icon(self, name, path):
-        path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), path)
+        path = os.path.join(bundle_dir, path)
         icon = QIcon()
         icon.addPixmap(QPixmap(path), QIcon.Mode.Normal, QIcon.State.Off)
         self._icons[name] = icon
@@ -88,7 +93,4 @@ class Icons:
         return icon
 
     def get_icon(self, name):
-        # global icons_instance
-        # if not icons_instance:
-        # icons_instance = Icons()
         return self.icon(name)

@@ -1,14 +1,19 @@
 """
 style sheets
 """
-__author__ = 'magnus'
+import sys
 import os
 
-# stylesheet_instance = None
+__author__ = 'magnus'
+__maintainer__ = "Corey Hooge"
+
+if getattr(sys, 'frozen', False):
+    bundle_dir = sys._MEIPASS
+else:
+    bundle_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 def get_stylesheet(name):
-    # global stylesheet_instance
-    # if not stylesheet_instance:
     stylesheet_instance = Stylesheets()
     return stylesheet_instance.get_stylesheet(name)
 
@@ -23,7 +28,7 @@ class Stylesheets:
         self.make_stylesheet("ribbonSmallButton", "stylesheets/ribbonSmallButton.css")
 
     def make_stylesheet(self, name, path):
-        path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), path)
+        path = os.path.join(bundle_dir, path)
         with open(path, encoding='utf-8') as data_file:
             stylesheet = data_file.read()
 
