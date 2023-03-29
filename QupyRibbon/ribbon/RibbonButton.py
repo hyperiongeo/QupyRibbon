@@ -2,12 +2,12 @@
 buttons
 """
 # from PyQt5 import Qt
-from pyqtgraph.Qt.QtCore import QSize, Qt
-from pyqtgraph.Qt.QtWidgets import (QToolButton)
-from pyqtgraph.Qt.QtGui import QFont
+from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtWidgets import (QToolButton)
+from PyQt5.QtGui import QFont
 
-from ribbon import gui_scale
-from ribbon.StyleSheets import get_stylesheet
+from . import gui_scale
+from .StyleSheets import get_stylesheet
 
 __author__ = 'magnus'
 

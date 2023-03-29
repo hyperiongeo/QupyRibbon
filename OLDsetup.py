@@ -7,6 +7,7 @@ setup(name='QupyRibbon',
       author='Hyperion GeoServices',
       author_email='hyperion.geo@gmail.com',
       license='MIT',
-      packages=['ribbon', 'icons', 'stylesheets'],
+      # packages=['ribbon', 'icons', 'stylesheets'],
+      packages=['QupyRibbon'],
       zip_safe=False)
 	  

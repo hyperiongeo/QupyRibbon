@@ -2,11 +2,11 @@
 tabs
 """
 
-from pyqtgraph.Qt.QtCore import Qt
-from pyqtgraph.Qt.QtWidgets import (QWidget, QHBoxLayout, QSpacerItem, QSizePolicy)
-from pyqtgraph.Qt.QtGui import QFont
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import (QWidget, QHBoxLayout, QSpacerItem, QSizePolicy)
+from PyQt5.QtGui import QFont
 
-from ribbon.RibbonPane import RibbonPane
+from .RibbonPane import RibbonPane
 
 
 class RibbonTab(QWidget):

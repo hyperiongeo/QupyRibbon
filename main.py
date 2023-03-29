@@ -3,7 +3,7 @@ main
 """
 import sys
 
-from pyqtgraph.Qt.QtWidgets  import (QApplication)
+from PyQt5.QtWidgets  import (QApplication)
 
 from ribbon.RibbonMainWindow import MainWindow #, RibbonMainWindow
 

@@ -1,13 +1,13 @@
 """
 widget
 """
-from pyqtgraph.Qt.QtCore import (Qt)
-from pyqtgraph.Qt.QtWidgets import (QWidget, QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
-from pyqtgraph.Qt.QtGui import QFont
+from PyQt5.QtCore import (Qt)
+from PyQt5.QtWidgets import (QWidget, QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
+from PyQt5.QtGui import QFont
 
-from ribbon.RibbonTab import RibbonTab
-from ribbon import gui_scale
-from ribbon.StyleSheets import get_stylesheet
+from .RibbonTab import RibbonTab
+from . import gui_scale
+from .StyleSheets import get_stylesheet
 
 __author__ = 'magnus'
 

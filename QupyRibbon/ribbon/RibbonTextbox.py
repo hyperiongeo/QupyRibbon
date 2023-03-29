@@ -1,7 +1,7 @@
 """
 text boxes
 """
-from pyqtgraph.Qt.QtWidgets import QLineEdit
+from PyQt5.QtWidgets import QLineEdit
 
 class RibbonTextbox(QLineEdit):
     def __init__(self, default_value, change_connector, max_width=50):
