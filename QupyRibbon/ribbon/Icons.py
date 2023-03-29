@@ -35,6 +35,7 @@ class Icons:
         self.make_icon("zoom", "icons/zoom.png")
         self.make_icon("zoom_in", "icons/zoom_in.png")
         self.make_icon("zoom_out", "icons/zoom_out.png")
+        self.make_icon("hand-cursor", "icons/icons8-hand-cursor-50.png")
         self.make_icon("copy", "icons/copy.png")
         self.make_icon("about", "icons/about.png")
         self.make_icon("help", "icons/help.png")
@@ -43,6 +44,8 @@ class Icons:
 
         self.make_icon("excel", "icons/excel.png")
         self.make_icon("csv", "icons/csv.png")
+        self.make_icon("tif", "icons/icons8-tif-64.png")
+        self.make_icon("json", "icons/icons8-json-80.png")
 
         self.make_icon("database", "icons/database.png")
         self.make_icon("row", "icons/row.png")
@@ -52,10 +55,12 @@ class Icons:
         self.make_icon("seismic", "icons/seismic.png")
         self.make_icon("wells", "icons/well.png")
         self.make_icon("las", "icons/icons8-well-100.png")
+        self.make_icon("raster", "icons/icons8-raster-graphics-60.png")
+        self.make_icon("vector", "icons/icons8-pen-64.png")
 
         self.make_icon("show", "icons/under-construction.png")
         self.make_icon("import", "icons/under-construction.png")
-        self.make_icon("add_fault", "icons/layersn.png")
+        self.make_icon("add_fault", "icons/layers.png")
         self.make_icon("import wells", "icons/well.png")
         self.make_icon("project", "icons/project.png")
         self.make_icon("delete", "icons/icons8-delete-document-100.png")
@@ -69,13 +74,15 @@ class Icons:
         self.make_icon("bezier", "icons/bezier-tool.png")
         self.make_icon("well", "icons/well.png")
         self.make_icon("water-well", "icons/water-well.png")
-        self.make_icon("tif", "icons/icons8-tif-64.png")
-        self.make_icon("json", "icons/icons8-json-80.png")
+
         self.make_icon("drilling-rig", "icons/icons8-drilling-rig-68.png")
         self.make_icon("scatter", "icons/scatter.png")
         self.make_icon("scatter-plot", "icons/scatter-plot.png")
         self.make_icon("settings", "icons/settings.png")
         self.make_icon("las", "icons/line-graph_vert.png")
+
+        self.make_icon("create", "icons/icons8-create-100.png")
+        self.make_icon("grid", "icons/icons8-grid-50.png")
 
 
     def make_icon(self, name, path):

@@ -16,7 +16,7 @@ app = QApplication(sys.argv)
 # # Show the window
 # main_wnd.show()
 
-infile = "icons/zoom.png"
+infile = "QupyRibbon/icons/zoom.png"
 outfile = infile.replace(".png", "_fixed.png")
 
 img = QImage(infile)
