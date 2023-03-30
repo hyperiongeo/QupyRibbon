@@ -61,12 +61,6 @@ class RibbonMainWindow(QMainWindow):
             pass
         self.centralWidget()
 
-        # # -------------      textboxes       -----------------
-
-        # self._text_box1 = RibbonTextbox("Text 1", self.on_text_box1_changed, 80)
-        # self._text_box2 = RibbonTextbox("Text 2", self.on_text_box1_changed, 80)
-        # self._text_box3 = RibbonTextbox("Text 3", self.on_text_box1_changed, 80)
-
         # Ribbon
 
         self._ribbon = RibbonWidget(self)
@@ -83,6 +77,12 @@ class RibbonMainWindow(QMainWindow):
             action.setShortcuts(shortcut)
         self.addAction(action)
         return action
+
+    def add_ribbon_button(self, action, is_large=True):
+        return RibbonButton(self, action, is_large)
+
+    def add_ribbon_combobox(self, default, change_connector, min_width=200, label="X"):
+        return RibbonCombobox(default, change_connector=change_connector, min_width=min_width, label=label)
 
     def init_ribbon(self):
         self.create_actions()

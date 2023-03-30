@@ -80,9 +80,14 @@ class Icons:
         self.make_icon("scatter-plot", "icons/scatter-plot.png")
         self.make_icon("settings", "icons/settings.png")
         self.make_icon("las", "icons/line-graph_vert.png")
+        self.make_icon("sgy", "icons/segy.png")
 
         self.make_icon("create", "icons/icons8-create-100.png")
-        self.make_icon("grid", "icons/icons8-grid-50.png")
+        self.make_icon("grid", "icons/grid.png")
+        self.make_icon("table", "icons/table.png")
+        self.make_icon("raster", "icons/raster-graphics.png")
+        self.make_icon("vector", "icons/vectors.png")
+        self.make_icon("rename", "icons/rename.png")
 
 
     def make_icon(self, name, path):
