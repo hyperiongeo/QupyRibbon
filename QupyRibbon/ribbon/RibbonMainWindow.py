@@ -18,7 +18,8 @@ class RibbonWindow(QMainWindow):
     def __init__(self, parent, title=""):
         super().__init__(parent)
         # self.resize(1280, 800)
-        self.setWindowTitle(title)
+        self.default_window_title = title
+        self.setWindowTitle(self.default_window_title)
 
         self.centralWidget()
 
@@ -49,7 +50,8 @@ class RibbonMainWindow(QMainWindow):
     def __init__(self, parent=None, dock=False, title="Prospector"):
         super().__init__(parent)
         self.resize(1280, 800)
-        self.setWindowTitle(title)
+        self.default_window_title = title
+        self.setWindowTitle(self.default_window_title)
         self.setDockNestingEnabled(True)
         self.setWindowIcon(get_icon("icon"))
         if dock:
