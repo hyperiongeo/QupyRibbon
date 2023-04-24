@@ -16,6 +16,11 @@ class RibbonButton(QToolButton):
     def __init__(self, owner, action, is_large):
         super().__init__(owner)
 
+        name = action.text().replace("&", "").replace("\n", "_").replace(" ", "_").lower()
+        name = "rbtn_"+action.statusTip().replace("...", "").replace(" ", "_").lower()
+        # print("create ribbon button with name:", name)
+        # self.setObjectName(name)
+
         font = QFont()
         font.setPointSize(9)
         self.setFont(font)

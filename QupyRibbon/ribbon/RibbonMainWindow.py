@@ -41,10 +41,17 @@ class RibbonWindow(QMainWindow):
         return action
 
     def add_ribbon_button(self, action, is_large=True):
-        return RibbonButton(self, action, is_large)
+        name = "rbtn_"+action.statusTip().replace("...", "").replace(" ", "_").lower()
+        setattr(self, name, RibbonButton(self, action, is_large))
+        # print("__creatint button:", name)
+        return getattr(self, name)
 
     def add_ribbon_combobox(self, default, change_connector, min_width=200, label="X"):
-        return RibbonCombobox(default, change_connector=change_connector, min_width=min_width, label=label)
+        name = "rcb_"+label.replace("...", "").replace(" ", "_").lower()
+        btn = RibbonCombobox(default, change_connector=change_connector, min_width=min_width, label=label)
+        setattr(self, name, btn)
+        # print("__creatint combo:", name)
+        return getattr(self, name)
 
 class RibbonMainWindow(QMainWindow):
     def __init__(self, parent=None, dock=False, title="Prospector"):
@@ -68,7 +75,7 @@ class RibbonMainWindow(QMainWindow):
         self._ribbon = RibbonWidget(self)
         self.addToolBar(self._ribbon)
 
-        self.init_ribbon()
+        # self.init_ribbon()
 
     def add_action(self, caption, icon_name, status_tip, icon_visible, connection, shortcut=None):
         action = QAction(get_icon(icon_name), caption, self)
@@ -81,10 +88,17 @@ class RibbonMainWindow(QMainWindow):
         return action
 
     def add_ribbon_button(self, action, is_large=True):
-        return RibbonButton(self, action, is_large)
+        name = "rbtn_"+action.statusTip().replace("...", "").replace(" ", "_").lower()
+        setattr(self, name, RibbonButton(self, action, is_large))
+        # print("__creatint button:", name)
+        return getattr(self, name)
 
     def add_ribbon_combobox(self, default, change_connector, min_width=200, label="X"):
-        return RibbonCombobox(default, change_connector=change_connector, min_width=min_width, label=label)
+        name = "rcb_"+label.replace("...", "").replace(" ", "_").lower()
+        btn = RibbonCombobox(default, change_connector=change_connector, min_width=min_width, label=label)
+        setattr(self, name, btn)
+        # print("__creatint combo:", name)
+        return getattr(self, name)
 
     def init_ribbon(self):
         self.create_actions()

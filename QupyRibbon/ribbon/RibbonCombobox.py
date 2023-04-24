@@ -11,6 +11,11 @@ class RibbonCombobox(QComboBox):
         font.setPointSize(font_size)
         self.setFont(font)
 
+        # if label is not None:
+        #     # name = label.replace("&", "").replace("\n", "_").replace(" ", "_").lower()
+        #     name = "rcb_"+label.replace("...", "").replace(" ", "_").lower()
+        #     self.setObjectName(name)
+
         self.setStyleSheet("border: 1px solid rgba(0,0,0,30%);")
         self.setCurrentText(default_value)
         self.setMinimumWidth(min_width)
