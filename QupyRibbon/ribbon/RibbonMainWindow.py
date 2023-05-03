@@ -5,7 +5,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QKeySequence as QKSec
 from PyQt5.QtWidgets import (QMainWindow, QDockWidget, QMessageBox, QLabel, QAction)
 
-from .RibbonButton import RibbonButton
+from .RibbonButton import RibbonButton, RibbonMenuButton
 from .Icons import get_icon
 # from .RibbonTextbox import RibbonTextbox
 from .RibbonCombobox import RibbonCombobox
@@ -87,6 +87,8 @@ class RibbonMainWindow(QMainWindow):
         self.addAction(action)
         return action
 
+    # def add_ribbon_button(self, action, is_large=True):
+    #     return RibbonButton(self, action, is_large)
     def add_ribbon_button(self, action, is_large=True):
         name = "rbtn_"+action.statusTip().replace("...", "").replace(" ", "_").lower()
         setattr(self, name, RibbonButton(self, action, is_large))
