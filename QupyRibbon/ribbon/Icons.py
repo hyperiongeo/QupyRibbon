@@ -29,7 +29,6 @@ class Icons:
         self.make_icon("folder", "icons/open-folder.png")
         self.make_icon("open", "icons/open-folder.png")
         self.make_icon("save", "icons/data-storage.png")
-        self.make_icon("icon", "icons/icon.png")
         self.make_icon("exit", "icons/exit.png")
         self.make_icon("paste", "icons/paste.png")
         self.make_icon("zoom", "icons/zoom.png")
@@ -88,6 +87,15 @@ class Icons:
         self.make_icon("raster", "icons/raster-graphics.png")
         self.make_icon("vector", "icons/vectors.png")
         self.make_icon("rename", "icons/rename.png")
+        
+        self.make_icon("preferences", "icons/48px-Preferences-system.svg.png")
+        self.make_icon("arrow", "icons/arrow.png")
+        self.make_icon("icon", "icons/icon.png")
+        self.make_icon("merge", "icons/consolidate.png")
+        self.make_icon("compile", "icons/compile.png")
+        self.make_icon("zone", "icons/zone.png")
+        self.make_icon("coding", "icons/coding.png")
+        
 
 
     def make_icon(self, name, path):
