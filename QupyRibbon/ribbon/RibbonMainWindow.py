@@ -43,7 +43,7 @@ class RibbonWindow(QMainWindow):
     def add_ribbon_button(self, action, is_large=True):
         name = "rbtn_"+action.statusTip().replace("...", "").replace(" ", "_").lower()
         setattr(self, name, RibbonButton(self, action, is_large))
-        # print("__creatint button:", name)
+
         return getattr(self, name)
 
     def add_ribbon_combobox(self, default, change_connector, min_width=200, label="X"):
