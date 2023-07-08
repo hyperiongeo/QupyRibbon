@@ -1,9 +1,9 @@
 """
 main windows
 """
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QKeySequence as QKSec
-from PyQt5.QtWidgets import (QMainWindow, QDockWidget, QMessageBox, QLabel, QAction)
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QKeySequence as QKSec, QAction
+from PyQt6.QtWidgets import (QMainWindow, QDockWidget, QMessageBox, QLabel)
 
 from .RibbonButton import RibbonButton, RibbonMenuButton
 from .Icons import get_icon

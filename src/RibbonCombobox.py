@@ -1,8 +1,8 @@
 """
 combo boxes
 """
-from PyQt5.QtWidgets import QComboBox
-from PyQt5.QtGui import QFont
+from PyQt6.QtWidgets import QComboBox
+from PyQt6.QtGui import QFont
 
 class RibbonCombobox(QComboBox):
     def __init__(self, default_value, change_connector, min_width=50, max_width=50, label=None, font_size=9):

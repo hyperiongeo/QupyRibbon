@@ -1,9 +1,9 @@
 """
 widget
 """
-from PyQt5.QtCore import (Qt)
-from PyQt5.QtWidgets import (QWidget, QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
-from PyQt5.QtGui import QFont
+from PyQt6.QtCore import (Qt)
+from PyQt6.QtWidgets import (QWidget, QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
+from PyQt6.QtGui import QFont
 
 from .RibbonTab import RibbonTab
 from . import gui_scale
@@ -40,7 +40,7 @@ class RibbonWidget(QToolBar):
 
     def set_active(self, name):
         self._ribbon_widget.setCurrentWidget(self._ribbon_widget.findChild(QWidget, "tab_" + name))
- 
+
 class RibbonTabBar(QToolBar):
     def __init__(self, parent):
         super().__init__(parent)

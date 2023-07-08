@@ -3,7 +3,7 @@ icons
 """
 import sys
 import os
-from PyQt5.QtGui import QIcon, QPixmap
+from PyQt6.QtGui import QIcon, QPixmap
 
 __author__ = 'magnus'
 __maintainer__ = "Corey Hooge"

@@ -3,16 +3,16 @@ main
 """
 import sys
 
-from PyQt5.QtWidgets  import (QApplication)
+from PyQt6.QtWidgets  import (QApplication)
 
-from ribbon.RibbonMainWindow import MainWindow #, RibbonMainWindow
+from src.RibbonMainWindow import RibbonMainWindow #, RibbonMainWindow
 
 __author__ = 'mamj'
 
 def main():
     app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(True)
-    main_window = MainWindow()
+    main_window = RibbonMainWindow()
     # main_window = RibbonMainWindow()
     main_window.show()
     sys.exit(app.exec())
