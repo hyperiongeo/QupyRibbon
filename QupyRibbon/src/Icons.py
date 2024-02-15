@@ -3,7 +3,7 @@ icons
 """
 import sys
 import os
-from PyQt6.QtGui import QIcon, QPixmap
+from PyQt5.QtGui import QIcon, QPixmap
 
 __author__ = 'magnus'
 __maintainer__ = "Corey Hooge"
@@ -40,6 +40,7 @@ class Icons:
         self.make_icon("help", "icons/help.png")
         self.make_icon("license", "icons/license.png")
         self.make_icon("create", "icons/project.png")
+        self.make_icon("vertical-flip", "icons/vertical-flip.png")
 
         self.make_icon("excel", "icons/excel.png")
         self.make_icon("csv", "icons/csv.png")
@@ -62,6 +63,8 @@ class Icons:
         self.make_icon("add_fault", "icons/layers.png")
         self.make_icon("import wells", "icons/well.png")
         self.make_icon("project", "icons/project.png")
+        self.make_icon("project2", "icons/project2.png")
+        self.make_icon("continuous", "icons/continuous.png")
         self.make_icon("delete", "icons/icons8-delete-document-100.png")
 
         self.make_icon("style", "icons/style.png")
@@ -87,6 +90,8 @@ class Icons:
         self.make_icon("raster", "icons/raster-graphics.png")
         self.make_icon("vector", "icons/vectors.png")
         self.make_icon("rename", "icons/rename.png")
+
+        self.make_icon("table-data", "icons/table-data.png")
         
         self.make_icon("preferences", "icons/48px-Preferences-system.svg.png")
         self.make_icon("arrow", "icons/arrow.png")

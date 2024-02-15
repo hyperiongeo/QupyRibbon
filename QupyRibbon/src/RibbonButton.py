@@ -2,9 +2,9 @@
 buttons
 """
 
-from PyQt6.QtCore import QSize, Qt
-from PyQt6.QtGui import QFont, QAction
-from PyQt6.QtWidgets import (QToolButton)
+from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import (QToolButton, QAction)
 
 from . import gui_scale
 from .StyleSheets import get_stylesheet
@@ -25,8 +25,6 @@ class RibbonButton(QToolButton):
         if isinstance(action, QAction):
             name = action.text().replace("&", "").replace("\n", "_").replace(" ", "_").lower()
             name = "rbtn_"+action.statusTip().replace("...", "").replace(" ", "_").lower()
-        # print("create ribbon button with name:", name)
-        # self.setObjectName(name)
 
             self._action_owner = action
             self.update_button_status_from_action()

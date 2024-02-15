@@ -3,8 +3,10 @@ fix icon profile issues
 """
 import sys
 
-from PyQt6.QtGui import QImage, QColorSpace
-from PyQt6.QtWidgets import (QApplication)
+from PyQt5
+.QtGui import QImage, QColorSpace
+from PyQt5
+.QtWidgets import (QApplication)
 
 #####################
 
