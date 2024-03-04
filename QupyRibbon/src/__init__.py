@@ -1,6 +1,6 @@
 """
 """
-from PyQt5.QtWidgets import (QApplication)
+from qtpy.QtWidgets import (QApplication)
 
 __author__ = 'mamj'
 

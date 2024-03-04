@@ -2,9 +2,9 @@
 buttons
 """
 
-from PyQt5.QtCore import QSize, Qt
-from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import (QToolButton, QAction)
+from qtpy.QtCore import QSize, Qt
+from qtpy.QtGui import QFont, QAction
+from qtpy.QtWidgets import (QToolButton)
 
 from . import gui_scale
 from .StyleSheets import get_stylesheet

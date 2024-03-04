@@ -3,8 +3,7 @@ main
 """
 import sys
 
-from PyQt5
-.QtWidgets  import (QApplication)
+from qtpy.QtWidgets  import (QApplication)
 
 from src.RibbonMainWindow import RibbonMainWindow #, RibbonMainWindow
 

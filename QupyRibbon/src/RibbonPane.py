@@ -1,9 +1,9 @@
 """
 panes
 """
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
-from PyQt5.QtGui import QFont, QPainter
+from qtpy.QtCore import Qt
+from qtpy.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
+from qtpy.QtGui import QFont, QPainter
 
 from . import gui_scale
 from .StyleSheets import get_stylesheet

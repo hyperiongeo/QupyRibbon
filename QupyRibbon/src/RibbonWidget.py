@@ -1,9 +1,9 @@
 """
 widget
 """
-from PyQt5.QtCore import (Qt)
-from PyQt5.QtWidgets import (QWidget, QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
-from PyQt5.QtGui import QFont
+from qtpy.QtCore import (Qt)
+from qtpy.QtWidgets import (QWidget, QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
+from qtpy.QtGui import QFont
 
 from .RibbonTab import RibbonTab
 from . import gui_scale

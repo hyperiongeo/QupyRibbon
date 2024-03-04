@@ -1,15 +1,15 @@
 """
 main windows
 """
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QKeySequence as QKSec, QAction
-from PyQt5.QtWidgets import (QMainWindow, QDockWidget, QMessageBox, QLabel)
+from qtpy.QtCore import Qt
+from qtpy.QtGui import QKeySequence as QKSec, QAction
+from qtpy.QtWidgets import (QMainWindow, QDockWidget, QMessageBox, QLabel)
 
-from ribbon.RibbonButton import RibbonButton
-from ribbon.Icons import get_icon
-from ribbon.RibbonTextbox import RibbonTextbox
-from ribbon.RibbonCombobox import RibbonCombobox
-from ribbon.RibbonWidget import RibbonWidget, RibbonTabBar
+from src.RibbonButton import RibbonButton
+from src.Icons import get_icon
+from src.RibbonTextbox import RibbonTextbox
+from src.RibbonCombobox import RibbonCombobox
+from src.RibbonWidget import RibbonWidget, RibbonTabBar
 
 __author__ = 'mamj'
 
