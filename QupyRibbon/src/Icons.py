@@ -25,7 +25,7 @@ class Icons:
         self.make_icon("", "icons/under-construction.png")
         self.make_icon("default", "icons/under-construction.png")
         self.make_icon("under_construction", "icons/under-construction.png")
-       
+
         self.make_icon("folder", "icons/open-folder.png")
         self.make_icon("open", "icons/open-folder.png")
         self.make_icon("save", "icons/data-storage.png")
@@ -57,6 +57,7 @@ class Icons:
         self.make_icon("las", "icons/icons8-well-100.png")
         self.make_icon("raster", "icons/icons8-raster-graphics-60.png")
         self.make_icon("vector", "icons/icons8-pen-64.png")
+        self.make_icon("vector", "icons/icons8-pen-64.png")
 
         self.make_icon("show", "icons/under-construction.png")
         self.make_icon("import", "icons/under-construction.png")
@@ -66,6 +67,7 @@ class Icons:
         self.make_icon("project2", "icons/project2.png")
         self.make_icon("continuous", "icons/continuous.png")
         self.make_icon("delete", "icons/icons8-delete-document-100.png")
+        self.make_icon("tops", "icons/layers2.png")
 
         self.make_icon("style", "icons/style.png")
         self.make_icon("style_add", "icons/style_add.png")
@@ -92,7 +94,7 @@ class Icons:
         self.make_icon("rename", "icons/rename.png")
 
         self.make_icon("table-data", "icons/table-data.png")
-        
+
         self.make_icon("preferences", "icons/48px-Preferences-system.svg.png")
         self.make_icon("arrow", "icons/arrow.png")
         self.make_icon("icon", "icons/icon.png")
@@ -100,7 +102,6 @@ class Icons:
         self.make_icon("compile", "icons/compile.png")
         self.make_icon("zone", "icons/zone.png")
         self.make_icon("coding", "icons/coding.png")
-        
 
 
     def make_icon(self, name, path):
