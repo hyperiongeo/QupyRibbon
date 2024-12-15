@@ -19,6 +19,10 @@ def get_icon(name):
     return icons_instance.icon(name)
 
 
+def create_icon(path):
+    icons_instance = Icons()
+    return icons_instance.make_icon_path(path)
+
 class Icons:
     def __init__(self):
         self._icons = {}
@@ -103,19 +107,23 @@ class Icons:
         self.make_icon("zone", "icons/zone.png")
         self.make_icon("coding", "icons/coding.png")
 
-
     def make_icon(self, name, path):
         path = os.path.join(bundle_dir, path)
         icon = QIcon()
         icon.addPixmap(QPixmap(path), QIcon.Mode.Normal, QIcon.State.Off)
         self._icons[name] = icon
 
+    def make_icon_path(self, path): #path is full path
+        icon = QIcon()
+        icon.addPixmap(QPixmap(path), QIcon.Mode.Normal, QIcon.State.Off)
+        return  icon
+
     def icon(self, name):
         icon = self._icons["default"]
         try:
             icon = self._icons[name]
         except KeyError:
-            print("icon " + name + " not found")
+            print(f"icon {name} not found")
         return icon
 
     def get_icon(self, name):

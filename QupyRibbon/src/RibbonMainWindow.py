@@ -50,12 +50,13 @@ class RibbonWindow(QMainWindow):
         name = "rcb_"+label.replace("...", "").replace(" ", "_").lower()
         btn = RibbonCombobox(default, change_connector=change_connector, min_width=min_width, label=label)
         setattr(self, name, btn)
-        # print("__creatint combo:", name)
+
         return getattr(self, name)
 
 class RibbonMainWindow(QMainWindow):
     def __init__(self, parent=None, dock=False, title="Prospector"):
         super().__init__(parent)
+
         self.resize(1280, 800)
         self.default_window_title = title
         self.setWindowTitle(self.default_window_title)
@@ -92,14 +93,14 @@ class RibbonMainWindow(QMainWindow):
     def add_ribbon_button(self, action, is_large=True):
         name = "rbtn_"+action.statusTip().replace("...", "").replace(" ", "_").lower()
         setattr(self, name, RibbonButton(self, action, is_large))
-        # print("__creatint button:", name)
+
         return getattr(self, name)
 
     def add_ribbon_combobox(self, default, change_connector, min_width=200, label="X"):
         name = "rcb_"+label.replace("...", "").replace(" ", "_").lower()
         btn = RibbonCombobox(default, change_connector=change_connector, min_width=min_width, label=label)
         setattr(self, name, btn)
-        # print("__creatint combo:", name)
+
         return getattr(self, name)
 
     def init_ribbon(self):
