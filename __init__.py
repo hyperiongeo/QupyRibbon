@@ -1,7 +1,7 @@
 """
 """
 
-from .src import Icons, RibbonButton, RibbonCombobox, RibbonMainWindow, RibbonPane, RibbonTab, RibbonTextbox, RibbonWidget, StyleSheets
+# from .src import Icons, RibbonButton, RibbonCombobox, RibbonMainWindow, RibbonPane, RibbonTab, RibbonTextbox, RibbonWidget, StyleSheets
 
 
 __version__ = "0.2.0"
