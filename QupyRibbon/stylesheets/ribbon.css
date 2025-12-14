@@ -11,9 +11,7 @@ QTabWidget:pane {
     border-top: 1px solid rgba(0,0,0,20%);
     top: -1;
 }
-QTabWidget{
 
-}
 
 QTabWidget::tab-bar {
     left: 2px;
@@ -28,8 +26,8 @@ QTabBar::tab {
     border-top-right-radius: 3px;
     margin-right:5px;
     color:#2A2A2A;
-    //font-size:7pt;//
- }
+    font-size:12pt; 
+}
 
 QTabBar::tab:hover {
     background: rgba(255, 119, 0, 20%);
