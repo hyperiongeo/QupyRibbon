@@ -2,11 +2,11 @@
 widget
 """
 from qtpy.QtCore import (Qt)
-from qtpy.QtWidgets import (QWidget, QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox, QLabel)
+from qtpy.QtWidgets import (QWidget, QTabWidget, QToolBar, QFrame, QHBoxLayout, QCheckBox)
 from qtpy.QtGui import QFont
 
 from .RibbonTab import RibbonTab
-from . import gui_scale
+from .utils import gui_scale
 from .StyleSheets import get_stylesheet
 
 __author__ = 'magnus'

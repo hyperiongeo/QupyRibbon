@@ -5,7 +5,7 @@ from qtpy.QtCore import Qt
 from qtpy.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QLabel, QGridLayout
 from qtpy.QtGui import QFont, QPainter
 
-from . import gui_scale
+from .utils import gui_scale
 from .StyleSheets import get_stylesheet
 
 __author__ = 'mamj'

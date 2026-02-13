@@ -1,17 +1,18 @@
 """
 main windows
 """
+import sys
 from qtpy.QtCore import Qt
 from qtpy.QtGui import QKeySequence as QKSec, QAction
-from qtpy.QtWidgets import (QMainWindow, QDockWidget, QMessageBox, QLabel)
+from qtpy.QtWidgets import (QApplication, QMainWindow, QDockWidget, QMessageBox, QLabel)
 
-from src.RibbonButton import RibbonButton
-from src.Icons import get_icon
-from src.RibbonTextbox import RibbonTextbox
-from src.RibbonCombobox import RibbonCombobox
-from src.RibbonWidget import RibbonWidget, RibbonTabBar
+from RibbonButton import RibbonButton
+from Icons import get_icon
+from RibbonTextbox import RibbonTextbox
+from RibbonCombobox import RibbonCombobox
+from RibbonWidget import RibbonWidget, RibbonTabBar
 
-__author__ = 'mamj'
+__author__ = 'cdh'
 
 
 class MainWindow(QMainWindow):
@@ -51,6 +52,8 @@ class MainWindow(QMainWindow):
         self._ribbon = RibbonWidget(self)
         self.addToolBar(self._ribbon)
         self.init_ribbon()
+
+        self.show()
 
     def add_action(self, caption, icon_name, status_tip, icon_visible, connection, shortcut=None):
         action = QAction(get_icon(icon_name), caption, self)
@@ -130,3 +133,27 @@ class MainWindow(QMainWindow):
         with open('LICENSE', 'r', encoding='utf-8') as open_file:
             lic = open_file.read()
         QMessageBox().information(self, "License", lic)
+
+
+if __name__ == '__main__':
+    # version = utils.Version()
+    # version.load(Config().bundle_dir)
+    # # info, version, date1 = utils.version_handling(Config().bundle_dir, json=True)
+
+    # # QgsApplication.setPrefixPath(os.environ.get("QGIS_PREFIX_PATH", r"C:\Program Files\QGIS 3.14\apps\qgis"), True)
+    # # QgsApplication.setPrefixPath(os.environ.get("QGIS_PREFIX_PATH", r"C:\Users\hooge\miniconda3\envs\qgis"), True)
+
+    # curr_date = datetime.today().strftime('%Y_%m_%d_%H_%M_%S')
+    # log_file = os.path.join(os.environ['TEMP'], 'Prospector log file ' + curr_date + '.txt')
+    # logging.basicConfig(filename=log_file, encoding='utf-8', level=logging.INFO)
+    # logging.info("Welcome to Hyperion Software's Prospector Seismic Interpretation Package")
+
+    app = QApplication([])
+
+    main_window = MainWindow()
+    # main_window.show()
+
+    # Start the main messageloop
+    sys.exit(app.exec())
+
+

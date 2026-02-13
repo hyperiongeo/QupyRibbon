@@ -1,6 +1,35 @@
+
 [build-system]
-requires = ["setuptools"]
+requires = ['matplotlib', 'pandas', 'numpy', 'lasio',
+			'scipy', 'geopandas'
+		]
 build-backend = "setuptools.build_meta"
 
-#[tool.setuptools]
-#include-package-data = true
+[project]			
+name = "QupyRibbon"
+version = "0.1.0"
+authors = [
+	{name="Corey Hooge", email="hyperion.geo@gmail.com"},	
+]
+description = Pangea random code from internet and written'
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE.txt"}
+classifiers = [
+		"Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ]
+dependencies = ['matplotlib', 'pandas', 'numpy', 'lasio',
+			'scipy', 'geopandas']
+
+[project.urls]
+"Homepage" = 'https://github.com/hyperiongeo/qupyribbon'
+"Bug Tracker" = "https://github.com/hyperiongeo/qupyribbon/issues"
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["src"]
+
+[tool.setuptools]
+include-package-data = true

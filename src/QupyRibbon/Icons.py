@@ -106,6 +106,7 @@ class Icons:
         self.make_icon("compile", "icons/compile.png")
         self.make_icon("zone", "icons/zone.png")
         self.make_icon("coding", "icons/coding.png")
+        self.make_icon("crop", "icons/crop.png")
 
     def make_icon(self, name, path):
         path = os.path.join(bundle_dir, path)

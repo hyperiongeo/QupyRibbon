@@ -6,7 +6,7 @@ from qtpy.QtCore import QSize, Qt
 from qtpy.QtGui import QFont, QAction
 from qtpy.QtWidgets import (QToolButton)
 
-from . import gui_scale
+from .utils import gui_scale
 from .StyleSheets import get_stylesheet
 
 __author__ = 'magnus'
