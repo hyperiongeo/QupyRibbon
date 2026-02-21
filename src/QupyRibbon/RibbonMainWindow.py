@@ -54,7 +54,7 @@ class RibbonWindow(QMainWindow):
         return getattr(self, name)
 
 class RibbonMainWindow(QMainWindow):
-    def __init__(self, parent=None, dock=False, title="Prospector"):
+    def __init__(self, parent=None, dock=False, title="Seismic Window"):
         super().__init__(parent)
 
         self.resize(1280, 800)
