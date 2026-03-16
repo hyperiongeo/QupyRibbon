@@ -23,6 +23,11 @@ def create_icon(path):
     icons_instance = Icons()
     return icons_instance.make_icon_path(path)
 
+
+def add_icon(name, path, is_full_path=False):
+    icons_instance = Icons()
+    return icons_instance.make_icon(name, path, is_full_path)
+
 class Icons:
     def __init__(self):
         self._icons = {}
@@ -107,6 +112,11 @@ class Icons:
         self.make_icon("zone", "icons/zone.png")
         self.make_icon("coding", "icons/coding.png")
         self.make_icon("crop", "icons/crop.png")
+
+    def add_icon(self, name, full_path):  #path is always full_path to icon
+        icon = QIcon()
+        icon.addPixmap(QPixmap(full_path), QIcon.Mode.Normal, QIcon.State.Off)
+        self._icons[name] = icon
 
     def make_icon(self, name, path):
         path = os.path.join(bundle_dir, path)

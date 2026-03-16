@@ -58,6 +58,19 @@ class RibbonPane(QWidget):
         self.contentLayout.addWidget(widget)
         grid_layout.setAlignment(Qt.AlignmentFlag.AlignTop | Qt.AlignmentFlag.AlignLeft)
         return grid_layout
+    
+    def remove_grid_widget(self, widget):
+        if widget.layout() is not None and widget.layout().count() > 0:
+            while widget.layout().count():
+                item =  widget.layout().takeAt(0)
+                wid = item.widget()
+                if wid is not None:
+                    wid.deleteLater() # Safely delete widget
+                else:
+                    # If it's a nested layout or spacer, handle accordingly
+                    pass 
+
+        self.contentLayout.removeWidget(widget)
 
 
 class RibbonSeparator(QWidget):
